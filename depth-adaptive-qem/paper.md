@@ -67,7 +67,7 @@ requested output count $N$. The physical probe diameter is the median valid sour
 
 
 $$
-d=\operatorname{median}\left\{\lVert\mathbf v_i-\mathbf v_j\rVert:(i,j)\in E\right\}.
+d=\mathrm{median}\left\{\lVert\mathbf v_i-\mathbf v_j\rVert:(i,j)\in E\right\}.
 $$
 
 
@@ -104,9 +104,9 @@ The finest probe pitch and tested hierarchy are
 
 
 $$
-p_{min}=\max(d,p_o),
+p_{\min}=\max(d,p_o),
 \qquad
-P=\{8p_{min},4p_{min},2p_{min},p_{min}\}.
+P=\{8p_{\min},4p_{\min},2p_{\min},p_{\min}\}.
 $$
 
 
@@ -114,7 +114,7 @@ $$
 source's ordinary edge scale; `p_o` prevents spacing below what the requested output can represent;
 and `P` is the coarse-to-fine hierarchy tested for each face.
 
-The method begins at $8p_{min}$. A face advances to a denser probe population only when the
+The method begins at $8p_{\min}$. A face advances to a denser probe population only when the
 coarser population cannot represent its local surface safely.
 
 ## 4. Adaptive trajectory analysis
@@ -219,7 +219,7 @@ define the local fitted plane. The scalar dot product finds the
 normal-direction offset, which is subtracted without sliding the vertex along the surface.
 
 Incident-face proposals are area-weighted per vertex. Total displacement is capped at
-$d_{max}=r/4$. The source face index array remains unchanged. Geometry unresolved at the finest
+$d_{\max}=r/4$. The source face index array remains unchanged. Geometry unresolved at the finest
 probe pitch is not projected.
 
 ## 6. Global QEM assembly
@@ -346,7 +346,7 @@ Feature voxel trials appended a quantized normal key:
 
 $$
 \mathbf g(\mathbf v)=\left(\mathbf k_h(\mathbf v),
-\operatorname{round}\left[s(\mathbf n(\mathbf v)+\mathbf 1)\right]\right).
+\mathrm{round}\left[s(\mathbf n(\mathbf v)+\mathbf 1)\right]\right).
 $$
 
 
@@ -376,7 +376,7 @@ continuous importance field:
 
 
 $$
-E'(\mathbf x)=E_{geom}(\mathbf x)+\lambda E_{probe}(\mathbf x).
+E'(\mathbf x)=E_{\mathrm{geom}}(\mathbf x)+\lambda E_{\mathrm{probe}}(\mathbf x).
 $$
 
 
@@ -389,7 +389,7 @@ the intended local budget.
 
 
 $$
-N_l=\operatorname{round}\left(
+N_l=\mathrm{round}\left(
 N\frac{n_lw_l}{\sum_m n_mw_m}\right).
 $$
 
@@ -404,7 +404,7 @@ global ordering.
 
 $$
 s_f=\frac{1}{K}\sum_{q=1}^{K}
-\mathbf 1\left[|z_{f,q}-z^{min}_{q}(u_f,v_f)|\le\delta\right].
+\mathbf 1\left[|z_{f,q}-z^{\min}_{q}(u_f,v_f)|\le\delta\right].
 $$
 
 
@@ -462,15 +462,15 @@ close wireframe and physical-density views. Every algorithm used the same orthog
 focal point, zoom, and source bounds. Every reduced result used the same physical triangle-density
 color scale.
 
-For sampled source points (x_s) and nearest points (y_s) on the output sample, the reported RMS
+For sampled source points $\mathbf x_s$ and nearest points $\mathbf y_s$ on the output sample, the reported RMS
 and P95 statistics are
 
 
 $$
-D_{RMS}=\sqrt{\frac{1}{S}\sum_{s=1}^{S}\|\mathbf x_s-\mathbf y_s\|^2},
+D_{\mathrm{RMS}}=\sqrt{\frac{1}{S}\sum_{s=1}^{S}\left\lVert\mathbf x_s-\mathbf y_s\right\rVert^2},
 \qquad
-D_{95}=\operatorname{percentile}_{95}
-\left(\|\mathbf x_s-\mathbf y_s\|\right).
+D_{95}=\mathrm{percentile}_{95}
+\left(\left\lVert\mathbf x_s-\mathbf y_s\right\rVert\right).
 $$
 
 
@@ -479,14 +479,14 @@ $$
 `D_95` reports the distance below which 95% of sampled measurements fall. These are one-directional
 sampled distances, not exact symmetric Hausdorff distance.
 
-For input and output bounding-box extents (mathbf d_{in}) and (mathbf d_{out}), maximum drift and
+For input and output bounding-box extents $\mathbf d_{\mathrm{in}}$ and $\mathbf d_{\mathrm{out}}$, maximum drift and
 surface-area error are
 
 
 $$
-D_{box}=\max_{a\in\{x,y,z\}}|d_{in,a}-d_{out,a}|,
+D_{\mathrm{box}}=\max_{a\in\{x,y,z\}}|d_{\mathrm{in},a}-d_{\mathrm{out},a}|,
 \qquad
-E_A=100\frac{|A_{out}-A_{in}|}{A_{in}}.
+E_A=100\frac{|A_{\mathrm{out}}-A_{\mathrm{in}}|}{A_{\mathrm{in}}}.
 $$
 
 
@@ -744,7 +744,7 @@ Two apparently direct integrations did not produce the intended allocation for d
 QEM minimized
 
 $$
-E'(\mathbf x)=E_{geom}(\mathbf x)+\lambda E_{probe}(\mathbf x),
+E'(\mathbf x)=E_{\mathrm{geom}}(\mathbf x)+\lambda E_{\mathrm{probe}}(\mathbf x),
 $$
 
 which preserved continuity of the probe scalar. It did not interpret a larger scalar as a request
