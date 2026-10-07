@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Cite this technical paper using the metadata below."
+title: "Depth Adaptive QEM: GPU-Guided Physical Probes for Quality-Preserving Mesh Simplification"
+version: "1.1"
+date-released: 2026-10-07
+type: article
+authors:
+  - name: "Make Your Own World"
+repository-code: "https://github.com/make-your-own-world/MeshMill"
