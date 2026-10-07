@@ -67,7 +67,7 @@ requested output count $N$. The physical probe diameter is the median valid sour
 
 
 $$
-d=\mathrm{median}\left\{\lVert\mathbf v_i-\mathbf v_j\rVert:(i,j)\in E\right\}.
+d=\mathrm{median}\left\lbrace\lVert\mathbf v_i-\mathbf v_j\rVert:(i,j)\in E\right\rbrace.
 $$
 
 
