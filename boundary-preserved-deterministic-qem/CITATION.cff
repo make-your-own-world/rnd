@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this engineering report, cite it as below."
+title: "Boundary-Preserved Deterministic QEM: Out-of-Core Simplification for Large Triangle Meshes"
+type: report
+version: "1.0"
+date-released: "2026-10-11"
+authors:
+  - name: "Make Your Own World"
+repository-code: "https://github.com/make-your-own-world/MeshMill"
+license: "CC-BY-SA-4.0"

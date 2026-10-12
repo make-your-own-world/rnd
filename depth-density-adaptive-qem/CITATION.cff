@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Cite this technical paper using the metadata below."
+title: "Depth + Density Adaptive QEM: Fast Density-Guided Surface Reduction"
+version: "1.1"
+date-released: 2026-10-11
+type: article
+authors:
+  - name: "Make Your Own World"
+repository-code: "https://github.com/make-your-own-world/MeshMill"
+license: "CC-BY-SA-4.0"

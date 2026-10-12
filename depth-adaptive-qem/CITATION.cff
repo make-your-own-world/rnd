@@ -7,3 +7,4 @@ type: article
 authors:
   - name: "Make Your Own World"
 repository-code: "https://github.com/make-your-own-world/MeshMill"
+license: "CC-BY-SA-4.0"

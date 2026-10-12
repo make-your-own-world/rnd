@@ -1,0 +1,15 @@
+experiment,density_weight,normal_weight,volume_preservation,rms_percent,p95_percent,drift_percent,area_percent,nonmanifold_percent,outcome
+attribute_qem,0.00,0.00,false,0.117796520,0.232658261,0.000659672,0.118042348,0.026400106,baseline extended QEM
+attribute_qem,0.10,0.00,false,0.101238276,0.185222009,0.001873766,0.117800452,0.013200053,shape improved but drift increased
+attribute_qem,0.15,0.00,false,0.097090000,0.174390000,0.001380000,0.120950000,,good shape tradeoff
+attribute_qem,0.25,0.00,false,0.092270000,0.161000000,0.002840000,0.121940000,,drift increased
+attribute_qem,0.50,0.00,false,0.088750000,0.151330000,0.002400000,0.128400000,,area error increased
+attribute_qem,1.00,0.00,false,0.088265609,0.147013778,0.004370145,0.139367484,0.010400000,density beginning to dominate
+attribute_qem,10.00,0.00,false,0.090587990,0.146908418,0.067831376,0.746992927,0.026800107,rejected global distortion
+attribute_qem,0.10,0.00,true,0.101201680,0.185221103,0.001835965,0.125264282,0.017200000,rejected volume preservation
+normal_sweep,0.15,1.00,false,0.106330000,0.199200000,0.000030000,0.095410000,0.015600000,rejected excessive normal weight
+density_gating,,,,0.119300000,0.242900000,,,,rejected post-projection gating lower bound
+density_gating,,,,0.119800000,0.244900000,,,,rejected post-projection gating upper bound
+attribute_qem,0.15,0.10,false,0.096900946,0.174545449,0.000001482,0.000011787,0.000000000,superseded because the topology stage required 74.68 seconds
+native_fast_qem,0.50,0.00,false,0.097228948,0.181799083,0.000001482,0.000020394,0.000000000,fast prototype retained as a future portable-backend candidate
+production_density_projection,,,,0.103339665,0.199313781,0.000001482,0.000010602,0.000000000,selected production pipeline at 13.65 seconds

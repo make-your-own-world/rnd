@@ -1,0 +1,3 @@
+method,seconds,triangles,rms_percent,p95_percent,dimension_drift_percent,area_change_percent,nonmanifold_percent
+In-memory Fast QEM,8.581,249184,0.113647,0.227477,0.067879,0.399084,0.020467
+Boundary-Preserved Deterministic QEM,4.671751,249679,0.120825,0.235518,0.004893,0.094952,0.016855

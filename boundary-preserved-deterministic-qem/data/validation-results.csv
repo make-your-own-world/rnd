@@ -1,0 +1,11 @@
+contract,fixture,result,evidence
+source_partition,reference scan,pass,"sum of tile source counts equals 4126315"
+deterministic_target,synthetic allocation,pass,"repeated largest-remainder allocation is identical and sums to requested target"
+assembly_count,reference scan,pass,"assembled record count equals 249679 validated tile triangles"
+assembly_payload,synthetic multi-tile mesh,pass,"assembled triangle payload equals ordered tile payload concatenation"
+parallel_consistency,reference scan,pass,"sequential and parallel SHA-256 values match"
+checkpoint_consistency,reference scan,pass,"cached reconstruction SHA-256 matches fresh runs"
+connected_seams,67600-triangle connected grid,pass,"source and output boundary-edge counts match"
+cancellation,connected grid,pass,"no published STL or partial file remains"
+resume,connected grid,pass,"completed checkpoint reused and final hash matches"
+corruption,synthetic multi-tile mesh,pass,"invalid checkpoint rejected and rebuilt"

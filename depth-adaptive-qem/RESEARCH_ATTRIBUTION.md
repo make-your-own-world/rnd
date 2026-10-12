@@ -28,7 +28,12 @@ dependency.
    and clarified the speed-versus-global-order tradeoff. The published method was reproduced for
    evaluation; its source code was not incorporated.
 
-4. Mohamed H. Mousa and Mohamed K. Hussein, [High-performance simplification of triangular surfaces
+4. Thomas M. Cover and Joy A. Thomas, *Elements of Information Theory*, second edition, Wiley,
+   2006. The data-processing inequality explains why a many-to-one voxel map cannot preserve
+   source distinctions that it discards. This reference supports the information-loss analysis in
+   the publication. It does not describe the Depth Adaptive QEM method.
+
+5. Mohamed H. Mousa and Mohamed K. Hussein, [High-performance simplification of triangular surfaces
    using a GPU](https://doi.org/10.1371/journal.pone.0255832), PLOS ONE 2021. Its conflict-set and
    independent-collapse treatment informed the parallel-collapse prototypes and their topology
    checks. The experiments showed that conservative independent sets were valid but too small on the
