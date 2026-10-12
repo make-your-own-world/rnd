@@ -469,3 +469,21 @@ The original contribution is the measured combination and derivation of physical
 The initial hybrid improved local quality but made an interactive reduction take approximately 80 seconds. Measurement showed that 92.3% of that time belonged to the substituted attribute-aware topology reducer. The production design keeps density and depth where parallel hardware provides value, then hands one corrected surface to the existing fast topology reducer and applies bounded finishing.
 
 The result is the strongest portable production balance measured here: 13.65 seconds, better sampled surface accuracy than the three existing production baselines, effectively zero measured dimension and area drift, and no measured non-manifold edges. The runtime failure, native weighted prototype, and final formula are documented so later work can improve the remaining local-error gap without repeating the 80-second design.
+
+## Independent Research, Related Work, and Attribution
+
+The purpose of this project is to explore ideas, solve problems, document what we learn, and make useful work available for others to build upon.
+
+Our work may involve original developments, improvements to established methods, independent rediscovery, or approaches that overlap with existing research and projects. We consider all of these worthwhile contributions. Novelty, priority, and recognition are not prerequisites for useful work.
+
+We recognize that virtually all research and development builds upon generations of work by others. We make a good-faith effort to identify and acknowledge relevant publications, projects, tools, and contributors, and to respect applicable licenses and attribution requirements.
+
+Some related work may only become known after research or development has already taken place. Being cited as related work does not necessarily mean that it influenced or was used in the original implementation. Where external work is directly incorporated or adapted, we aim to identify and credit it appropriately.
+
+No individual or project can reasonably guarantee awareness of every related idea, publication, implementation, or independent discovery. References and acknowledgments therefore reflect the information available at the time and may be expanded or corrected as additional work comes to our attention.
+
+We do not claim exclusive ownership of general ideas, methods, or discoveries, nor do we assume that independent development establishes historical priority. Similarity or overlap should not, by itself, be interpreted as evidence of copying or misappropriation.
+
+We welcome constructive corrections, additional references, and contributions that improve the accuracy and usefulness of the published record. Our focus is on the work itself and the knowledge it makes available, rather than disputes over recognition or precedence.
+
+**Whether something is new, familiar, independently rediscovered, or simply useful, our goal is the same: preserve what was learned, share it openly, and help others move forward.**
