@@ -108,7 +108,7 @@ $\mathcal C_t$ is the candidate set and $U$ is the topology and priority update.
 The source sampling scale is the median valid edge length:
 
 $$
-d=\operatorname{median}\left(\left\{
+d=\mathrm{median}\left(\left\{
 \left\lVert\mathbf v_i-\mathbf v_j\right\rVert:(i,j)\in E
 \right\}\right).
 $$
@@ -168,12 +168,12 @@ $F(i)$ is the set of faces incident on vertex $i$. Log density, robust center, a
 
 $$
 \ell_i=\ln(\max(\rho_i,\varepsilon)),
-\qquad m=\operatorname{median}(\ell_i),
+\qquad m=\mathrm{median}(\ell_i),
 $$
 
 $$
 \sigma_r=\max\left(
-1.4826\operatorname{median}(|\ell_i-m|),\varepsilon
+1.4826\mathrm{median}(|\ell_i-m|),\varepsilon
 \right),
 \qquad z_i=\frac{\ell_i-m}{\sigma_r}.
 $$
@@ -221,7 +221,7 @@ Tested variants produced RMS of approximately 0.1193% to 0.1198% and P95 of 0.24
 
 ### 5.2 Global attribute-aware QEM
 
-The first complete hybrid placed normalized density $s_i=(\operatorname{clip}(z_i,-4,4)+4)/8$ and area-weighted normals into an extended objective:
+The first complete hybrid placed normalized density $s_i=(\mathrm{clip}(z_i,-4,4)+4)/8$ and area-weighted normals into an extended objective:
 
 $$
 E_{\mathrm{attr}}=E_g+\lambda_{\rho}E_{\rho}+\lambda_nE_n,
