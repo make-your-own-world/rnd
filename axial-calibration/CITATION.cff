@@ -1,0 +1,7 @@
+cff-version: 1.2.0
+message: "Please cite this report and its referenced sources."
+title: "Probe-Guided Axial Alignment of Scanned Meshes"
+version: 1.0
+type: report
+authors:
+  - family-names: "Make Your Own World"
