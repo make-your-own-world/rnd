@@ -1,0 +1,3 @@
+fixture,input_faces,output_faces,source_faces_retained,source_unique_faces,input_open_edges,result_open_edges,reference_volume_mm3,result_volume_mm3,convex_volume_mm3,seconds
+concave-bracket,18,20,18,18,4,0,4000.0,4000.0,5600.0,1.6139138999860734
+hollow-tube,496,512,496,496,18,0,5959.442271939809,5959.442271939809,9033.259810675954,1.6001181999745313

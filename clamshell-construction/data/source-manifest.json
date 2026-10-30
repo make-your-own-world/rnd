@@ -1,0 +1,38 @@
+[
+  {
+    "file": "experiments/code/clamshell_mold.py",
+    "sha256": "ba48e5c29e38e743ebc970f48085cee61f231ea6caf9cc79cb63b309ba007bf9"
+  },
+  {
+    "file": "experiments/code/exposed_surface.py",
+    "sha256": "2bd4c44eb4b1aae1f4a81a0500005ffc7d39422e915e973e30e23f65f052035b"
+  },
+  {
+    "file": "experiments/code/imprint_cleanup.py",
+    "sha256": "f89af8d9e959ef89f339621f235aeda554676291cafce2116585e6f353f14809"
+  },
+  {
+    "file": "experiments/code/partial_scan_cavity.py",
+    "sha256": "09dc19c127a4b79711a555905c11fa6536ff6acb1fa86be95dabf4b4d5444278"
+  },
+  {
+    "file": "experiments/code/reproduce_completion_and_cast.py",
+    "sha256": "5e844d349440595c19aeb80671ebdacb7b4bd2b1452fe76e7356f50ad97d333a"
+  },
+  {
+    "file": "experiments/code/solidify.py",
+    "sha256": "bba461d7933431186511388c57471485b40845938b19f0c34a1d153c6e996d89"
+  },
+  {
+    "file": "experiments/code/surface_sheets.py",
+    "sha256": "c6a1960d8704655de7199d270d65d5f46befc42459cd548be2493fdbb359f1d8"
+  },
+  {
+    "file": "experiments/code/wall_thickness.py",
+    "sha256": "9f4ba7a8a297b31ac39370bc66fae58ed48238686bcb9761bbae05d58008751e"
+  },
+  {
+    "file": "experiments/LICENSE",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  }
+]

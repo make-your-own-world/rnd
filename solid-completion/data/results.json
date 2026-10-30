@@ -1,0 +1,96 @@
+[
+  {
+    "fixture": "concave-bracket",
+    "status": "accepted",
+    "input_faces": 18,
+    "reference_faces": 20,
+    "output_faces": 20,
+    "source_faces_retained": 18,
+    "source_unique_faces": 18,
+    "reference_volume_mm3": 4000.0,
+    "result_volume_mm3": 4000.0,
+    "convex_volume_mm3": 5600.0,
+    "input_open_edges": 4,
+    "result_open_edges": 0,
+    "seconds": 1.6139138999860734,
+    "topology": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_edges": 0,
+      "removed_degenerate_faces": 0,
+      "removed_duplicate_faces": 0,
+      "repaired_split_edges": 0
+    },
+    "report": {
+      "method": "Surface repair",
+      "pitch_mm": 0.35,
+      "topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_edges": 0,
+        "removed_degenerate_faces": 0,
+        "removed_duplicate_faces": 0,
+        "repaired_split_edges": 0
+      },
+      "backend_warning_stages": [],
+      "completion": {
+        "source_faces": 18,
+        "retained_faces": 18,
+        "retained_percent": 100.0,
+        "added_faces": 2,
+        "added_area": 250.0,
+        "rebuilt_percent": 12.755102040816327,
+        "open_edges": 0
+      }
+    },
+    "centroid_distance_rms_mm": 0.0,
+    "centroid_distance_max_mm": 0.0
+  },
+  {
+    "fixture": "hollow-tube",
+    "status": "accepted",
+    "input_faces": 496,
+    "reference_faces": 512,
+    "output_faces": 512,
+    "source_faces_retained": 496,
+    "source_unique_faces": 496,
+    "reference_volume_mm3": 5959.442271939809,
+    "result_volume_mm3": 5959.442271939809,
+    "convex_volume_mm3": 9033.259810675954,
+    "input_open_edges": 18,
+    "result_open_edges": 0,
+    "seconds": 1.6001181999745313,
+    "topology": {
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "inconsistent_edges": 0,
+      "removed_degenerate_faces": 0,
+      "removed_duplicate_faces": 0,
+      "repaired_split_edges": 0
+    },
+    "report": {
+      "method": "Surface repair",
+      "pitch_mm": 0.35,
+      "topology": {
+        "boundary_edges": 0,
+        "nonmanifold_edges": 0,
+        "inconsistent_edges": 0,
+        "removed_degenerate_faces": 0,
+        "removed_duplicate_faces": 0,
+        "repaired_split_edges": 0
+      },
+      "backend_warning_stages": [],
+      "completion": {
+        "source_faces": 496,
+        "retained_faces": 496,
+        "retained_percent": 100.0,
+        "added_faces": 16,
+        "added_area": 37.24651432788997,
+        "rebuilt_percent": 1.248795187115227,
+        "open_edges": 0
+      }
+    },
+    "centroid_distance_rms_mm": 2.924031465580656e-07,
+    "centroid_distance_max_mm": 1.2636335155662775e-06
+  }
+]

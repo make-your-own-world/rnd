@@ -1,0 +1,38 @@
+[
+  {
+    "fixture": "concave-bracket",
+    "matched_fields": [
+      "source_faces_retained",
+      "result_open_edges",
+      "result_volume_mm3"
+    ],
+    "exact_match": true
+  },
+  {
+    "fixture": "hollow-tube",
+    "matched_fields": [
+      "source_faces_retained",
+      "result_open_edges",
+      "result_volume_mm3"
+    ],
+    "exact_match": true
+  },
+  {
+    "fixture": "Blob",
+    "matched_fields": [
+      "faces",
+      "open_edges",
+      "split_volume_change_percent"
+    ],
+    "exact_match": true
+  },
+  {
+    "fixture": "Box",
+    "matched_fields": [
+      "faces",
+      "open_edges",
+      "split_volume_change_percent"
+    ],
+    "exact_match": true
+  }
+]

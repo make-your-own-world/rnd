@@ -1,0 +1,86 @@
+[
+  {
+    "shape": "blob",
+    "station": "Bottom edge",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.29508197763136956,
+    "cast_clearance_mm": 0.40833333134651184
+  },
+  {
+    "shape": "blob",
+    "station": "Right end",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.3246286062813475,
+    "cast_clearance_mm": 0.3916664123535156
+  },
+  {
+    "shape": "blob",
+    "station": "Notch horizontal",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.28450356175271274,
+    "cast_clearance_mm": 0.4416666030883789
+  },
+  {
+    "shape": "blob",
+    "station": "Notch vertical",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.2676962591242589,
+    "cast_clearance_mm": 0.3281022728755083
+  },
+  {
+    "shape": "blob",
+    "station": "Top end",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.33156324166643714,
+    "cast_clearance_mm": 0.3916664123535156
+  },
+  {
+    "shape": "blob",
+    "station": "Left edge",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.29508197954423937,
+    "cast_clearance_mm": 0.40833333134651184
+  },
+  {
+    "shape": "box",
+    "station": "Bottom edge",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.29508197763136956,
+    "cast_clearance_mm": 0.40833333134651184
+  },
+  {
+    "shape": "box",
+    "station": "Right end",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.3246286062813475,
+    "cast_clearance_mm": 0.3916664123535156
+  },
+  {
+    "shape": "box",
+    "station": "Notch horizontal",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.28450356175271274,
+    "cast_clearance_mm": 0.4416666030883789
+  },
+  {
+    "shape": "box",
+    "station": "Notch vertical",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.2676962591242589,
+    "cast_clearance_mm": 0.3281022728755083
+  },
+  {
+    "shape": "box",
+    "station": "Top end",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.33156324166643714,
+    "cast_clearance_mm": 0.3916664123535156
+  },
+  {
+    "shape": "box",
+    "station": "Left edge",
+    "nominal_vertex_offset_mm": 0.5,
+    "skin_clearance_mm": 0.29508197954423937,
+    "cast_clearance_mm": 0.40833333134651184
+  }
+]

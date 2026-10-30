@@ -1,2 +1,9 @@
 *.pdf binary
 *.png binary
+*.py text eol=lf
+*.json text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.cff text eol=lf
+*/experiments/LICENSE text eol=lf
+*.vtp binary

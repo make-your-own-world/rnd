@@ -1,0 +1,34 @@
+[
+  {
+    "file": "experiments/code/constrained_solid.py",
+    "sha256": "8a3b5b133606af7071bde7077dc69f50e7fb33f800b72204e8f4dd790198eaff"
+  },
+  {
+    "file": "experiments/code/imprint_cleanup.py",
+    "sha256": "f89af8d9e959ef89f339621f235aeda554676291cafce2116585e6f353f14809"
+  },
+  {
+    "file": "experiments/code/reproduce_completion_and_cast.py",
+    "sha256": "5e844d349440595c19aeb80671ebdacb7b4bd2b1452fe76e7356f50ad97d333a"
+  },
+  {
+    "file": "experiments/code/solidify.py",
+    "sha256": "bba461d7933431186511388c57471485b40845938b19f0c34a1d153c6e996d89"
+  },
+  {
+    "file": "experiments/code/surface_distance_gpu.py",
+    "sha256": "202b3925e451d2323c3051511834d0f61e9bdbb66fd24947828e33492cd02c34"
+  },
+  {
+    "file": "experiments/code/surface_repair.py",
+    "sha256": "9e3dd8cb81114340ffebfd7df7174548aaa96212ea69cdc9ef2a4bcf3d134fcb"
+  },
+  {
+    "file": "experiments/code/surface_support_repair.py",
+    "sha256": "1440eed140f1de9be163f6c63e4e5afaea5ec00ae2d4453ce00798586701c8a0"
+  },
+  {
+    "file": "experiments/LICENSE",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  }
+]

@@ -10,6 +10,9 @@ Technical publications on geometry processing and mesh reduction.
 | [Density-Balanced QEM](density-balanced-qem/README.md) | Density-aware QEM adaptation for nonuniform scanned and composite meshes. | 1.0 |
 | [Depth + Density Adaptive QEM](depth-density-adaptive-qem/README.md) | Combined depth-gauge and density-guided reduction for the strongest measured preservation results. | 1.1 |
 | [Boundary-Preserved Deterministic QEM](boundary-preserved-deterministic-qem/README.md) | Bounded-memory, deterministic tiled reduction and streamed assembly for large binary STL meshes. | 1.0 |
+| [Probe-Guided Axial Calibration](axial-calibration/README.md) | Surface-probe fitting, measured runout, and rigid axial correction of scanned meshes. | 1.0 |
+| [Surface-Preserving Solid Completion](solid-completion/README.md) | Constrained volume labeling and local repair that retain measured scan facets while closing missing surfaces. | 1.0 |
+| [Hollow Split Clamshell Construction](clamshell-construction/README.md) | Clearance surfaces, cavity subtraction, sampled material construction, and closed split halves. | 1.0 |
 
 Each publication includes a Markdown paper, rendered PDF, citation metadata, research and implementation attribution, sanitized numerical evidence, and publication figures.
 

@@ -1,14 +1,12 @@
 # Probe-Guided Axial Alignment of Scanned Meshes
 
-Make Your Own World | Version 1.0
+Version 1.0.
 
 ## Abstract
 
 A scanned object can be centered on screen and still wobble when rotated. This work describes a viewport-oriented calibration workflow that uses manually placed surface probes to correct eccentricity and tilt without changing the mesh. Geometric shared-axis fitting and measured harmonic correction generate candidate updates. Independent angular sampling, per-contact protection, and explicit coverage checks determine acceptance and completion. Synthetic shapes document both successful alignment and residual runout where a single straight axis is insufficient.
 
-![Fixed probes and a corrected shared axis, schematic](figures/probe-principle.png)
-
-Schematic of the measurement principle, not an experimental result.
+![Probe measurement principle: contact heights constrain eccentricity and tilt without changing the source surface.](figures/probe-principle.png)
 
 ## 1. The alignment problem
 
@@ -21,7 +19,7 @@ Calibration changes a rigid reference frame. It does not cut, smooth, straighten
 The rotation direction begins in the current viewport, using the selected viewport-relative direction rather than forcing an original model axis. The initial center uses triangle-area weighting so a densely triangulated patch does not dominate merely because it contains more vertices.
 
 $$
-\mathbf c_A=\frac{\sum_f A_f\mathbf c_f}{\sum_f A_f}
+\mathbf{c}_A=\frac{\sum_f A_f\mathbf{c}_f}{\sum_f A_f}
 $$
 
 | Symbol | Meaning |
@@ -43,7 +41,7 @@ Camera navigation, inspection spin, and calibration are separate transforms. Tre
 ## 3. Rigid correction and transform order
 
 $$
-\mathbf p=(t_x,t_y,\rho_x,\rho_y)^T,\quad\mathbf w=(\rho_x,\rho_y,0)^T
+\mathbf{p}=(t_x,t_y,\rho_x,\rho_y)^T,\quad\mathbf{w}=(\rho_x,\rho_y,0)^T
 $$
 
 | Symbol | Meaning |
@@ -56,7 +54,7 @@ $$
 Translation along the spindle does not change radial centering. Rotation around the spindle is inspection motion rather than an additional alignment parameter. The rotation-vector representation avoids treating two tilt controls as unrelated camera Euler angles.
 
 $$
-R=I+\frac{\sin\alpha}{\alpha}[\mathbf w]_\times+\frac{1-\cos\alpha}{\alpha^2}[\mathbf w]_\times^2
+R=I+\frac{\sin\alpha}{\alpha}[\mathbf{w}]_\times+\frac{1-\cos\alpha}{\alpha^2}[\mathbf{w}]_\times^2
 $$
 
 | Symbol | Meaning |
@@ -67,7 +65,7 @@ $$
 | R | Rigid tilt rotation; the zero-angle case uses its continuous limit. |
 
 $$
-P(\mathbf p):\mathbf x\mapsto R\mathbf x+(t_x,t_y,0)^T
+P(\mathbf{p}):\mathbf{x}\mapsto R\mathbf{x}+(t_x,t_y,0)^T
 $$
 
 | Symbol | Meaning |
@@ -77,7 +75,7 @@ $$
 | R | Tilt rotation from the preceding relation. |
 
 $$
-\mathbf x_s(\theta)=S_z(\theta)P(\mathbf p)M\mathbf x_m
+\mathbf{x}_s(\theta)=S_z(\theta)P(\mathbf{p})M\mathbf{x}_m
 $$
 
 | Symbol | Meaning |
@@ -92,7 +90,7 @@ $$
 A probe acts like a stationary measuring finger. Different points of the mesh pass underneath it. Attaching it to a vertex instead makes it follow the object and removes the intended measurement. This distinction was a central interaction correction during development.
 
 $$
-\mathbf s_g=(0,0,h_g)^T,\quad\mathbf q_g(\lambda)=\mathbf s_g+\lambda\mathbf u_g
+\mathbf{s}_g=(0,0,h_g)^T,\quad\mathbf{q}_g(\lambda)=\mathbf{s}_g+\lambda\mathbf{u}_g
 $$
 
 | Symbol | Meaning |
@@ -106,7 +104,7 @@ $$
 A static VTK surface locator remains in model coordinates. For each inspection pose, the contact segment is transformed into that frame, intersected with the mesh, and the hit transformed back. Reusing the locator avoids rebuilding a geometry search structure for every rotation.
 
 $$
-\mathbf x_{hit}\cdot\mathbf u_g>0,\quad r_g=\mathbf x_{hit}\cdot\mathbf u_g
+\mathbf{x}_{hit}\cdot\mathbf{u}_g>0,\quad r_g=\mathbf{x}_{hit}\cdot\mathbf{u}_g
 $$
 
 | Symbol | Meaning |
@@ -117,12 +115,16 @@ $$
 
 A near-side hole can otherwise produce a hit on the opposite wall. Rejecting that hit prevents one class of false contact, but it does not infer all exterior-surface semantics for arbitrary incomplete geometry. Missing contacts remain missing rather than becoming zero-radius readings.
 
+![Recorded calibration geometry. Fixed probe contacts sample the rotating surface at different heights. Dashed gray lines show the initial frame; colored lines show the corrected reference. The rigid correction changes orientation and center without changing the mesh surface.](figures/calibration-geometry.png)
+
+![Probe-contact detail. Separated contact heights reveal tilt as different lateral offsets; the passing surface supplies the radial measurements used in the harmonic fit.](figures/probe-contact-detail.png)
+
 ## 5. Why separated probe heights constrain tilt
 
 One measured section can identify a center without determining a centerline direction. For small tilt, the lateral center varies approximately linearly with height. This relation explains observability; it is not a replacement for the implemented shared-axis fit.
 
 $$
-\mathbf c_\perp(h)\approx\mathbf c_0+h\mathbf\beta,\quad\mathbf\beta\approx\frac{\mathbf c_\perp(h_2)-\mathbf c_\perp(h_1)}{h_2-h_1}
+\mathbf{c}_\perp(h)\approx\mathbf{c}_0+h\mathbf{\beta},\quad\mathbf{\beta}\approx\frac{\mathbf{c}_\perp(h_2)-\mathbf{c}_\perp(h_1)}{h_2-h_1}
 $$
 
 | Symbol | Meaning |
@@ -150,7 +152,7 @@ $$
 | k | Harmonic order, from one to three. |
 
 $$
-\widehat{\mathbf\gamma}_g=\arg\min_{\mathbf\gamma}\|X_g\mathbf\gamma-\mathbf r_g\|_2^2
+\widehat{\mathbf{\gamma}}_g=\arg\min_{\mathbf{\gamma}}\|X_g\mathbf{\gamma}-\mathbf{r}_g\|_2^2
 $$
 
 | Symbol | Meaning |
@@ -191,7 +193,7 @@ A centered oval may have small W_g while retaining substantial T_g. The first me
 One candidate comes from fitting a shared axis to sampled contacts. The geometric proposal gathers 64 views, reverses the current inspection spin and correction for the sampled contacts, and retains their probe-group identities. A group can have a different radius from another group, allowing stepped or tapered parts without forcing a single cylinder.
 
 $$
-\ell(t)=\mathbf c+t\mathbf a,\quad d_i=\|(I-\mathbf a\mathbf a^T)(\mathbf x_i-\mathbf c)\|
+\ell(t)=\mathbf{c}+t\mathbf{a},\quad d_i=\|(I-\mathbf{a}\mathbf{a}^T)(\mathbf{x}_i-\mathbf{c})\|
 $$
 
 | Symbol | Meaning |
@@ -229,7 +231,7 @@ The fit uses finite differences, a small damping term, bounds, and decreasing li
 A second proposal directly estimates how the first-harmonic signal changes under translation and tilt. This complements the geometric proposal: an improvement in a geometric fitting objective is not automatically an improvement in the measured rotation objective.
 
 $$
-\mathbf f(\mathbf p)=(a_{11},b_{11},a_{21},b_{21},\ldots)^T
+\mathbf{f}(\mathbf{p})=(a_{11},b_{11},a_{21},b_{21},\ldots)^T
 $$
 
 | Symbol | Meaning |
@@ -238,7 +240,7 @@ $$
 | p | Current correction parameters. |
 
 $$
-H_{ij}\approx\frac{f_i(\mathbf p+\epsilon_j\mathbf e_j)-f_i(\mathbf p)}{\epsilon_j}
+H_{ij}\approx\frac{f_i(\mathbf{p}+\epsilon_j\mathbf{e}_j)-f_i(\mathbf{p})}{\epsilon_j}
 $$
 
 | Symbol | Meaning |
@@ -248,7 +250,7 @@ $$
 | e_j | Coordinate basis vector for parameter j. |
 
 $$
-D=\mathrm{diag}(L,L,1,1),\quad\Delta\mathbf p=-D(HD)^+\mathbf f
+D=\mathrm{diag}(L,L,1,1),\quad\Delta\mathbf{p}=-D(HD)^+\mathbf{f}
 $$
 
 | Symbol | Meaning |
@@ -264,7 +266,7 @@ Numerical rank is checked against a relative threshold based on the scaled matri
 Individual updates are bounded to 0.08 L translation and two degrees of tilt, with a twenty-degree total tilt limit. The line search tests a bounded step and smaller fractions. These limits control a local refinement workflow after approximate manual orientation; they do not describe a universal range of object orientations.
 
 $$
-\mathbf p^{\prime}=\mathbf p+\eta\Delta\mathbf p
+\mathbf{p}^{\prime}=\mathbf{p}+\eta\Delta\mathbf{p}
 $$
 
 | Symbol | Meaning |
@@ -328,7 +330,7 @@ Once stable, detection stops and probes disappear while rotation continues for i
 Surface-search construction and fitting run outside the render callback. Generation ownership prevents an obsolete result from replacing a newer correction. Reusing geometry and coalescing render updates reduces redundant presentation work. Stable inspection no longer needs repeated fitting.
 
 $$
-\mathbf p_{display}^{new}=\mathbf p_{display}+(\mathbf p_{target}-\mathbf p_{display})(1-e^{-\Delta t/\tau})
+\mathbf{p}_{display}^{new}=\mathbf{p}_{display}+(\mathbf{p}_{target}-\mathbf{p}_{display})(1-e^{-\Delta t/\tau})
 $$
 
 | Symbol | Meaning |
@@ -345,8 +347,6 @@ Smoothing affects how an accepted correction is shown, not whether it passes. Wi
 Nine intentionally misaligned fixtures were generated with 96 angular sections and seven height rings. Three probes at heights -3, 0, and 3 supplied multi-height evidence. Initial translation was (0.23, -0.17), and tilt-vector components were (0.065, -0.045) radians. Model extent for the fitting controls was 14. Each accepted change was checked on an additional 257-angle grid, followed by a no-further-update recheck at convergence.
 
 ![Independent synthetic-profile results. Bars show combined first-harmonic runout before and after correction. Small final values are not presented as perfect physical accuracy.](figures/runout.png)
-
-Independent synthetic-profile results. Bars show combined first-harmonic runout before and after correction. Small final values are not presented as perfect physical accuracy.
 
 | Fixture | Accepted steps | Runout reduction | Seconds |
 | --- | --- | --- | --- |
@@ -365,8 +365,6 @@ Timings are single recorded numerical-loop runs, including the independent check
 The bent fixture retained approximately 15.96 percent of its original objective. Its centerline changes along its length, so one straight axis cannot align every section simultaneously. Residual wobble is an informative result, not a reason to deform the source or report false completion accuracy.
 
 ![Reduction calculated from unrounded values. Near-zero synthetic residuals are labeled greater than 99.99 percent rather than exact 100 percent.](figures/improvement.png)
-
-Reduction calculated from unrounded values. Near-zero synthetic residuals are labeled greater than 99.99 percent rather than exact 100 percent.
 
 Focused checks also cover incomplete contact, insignificant numerical changes, regressions, and orientation helpers. An incomplete-contact fixture is expected to fail calibration rather than report success. These tests establish specific numerical and behavioral properties; they do not certify every scan or a physical measuring instrument.
 
